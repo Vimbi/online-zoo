@@ -1,0 +1,888 @@
+$color-orange: #F58021;
+$color-dark-orange: #D26004;
+$color-black: #000000;
+$color-navy: #20113D;
+$color-white: #FFFFFF;
+$color-turquoise: #00A092;
+
+@mixin animal_position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*-------------------------------Header---------------------------*/
+header {
+  width: 100%;
+  background-color: #F58021;
+
+  .header_wrapper {
+    display: flex;
+    max-width: 140rem;
+    height: 11rem;
+    padding-top: 0.1rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo_wrapper {
+      display: flex;
+
+      a {
+        display: block;
+      }
+
+      .hidden_zoo {
+        visibility: hidden;
+      }
+    }
+
+    .nav-social_wrapper{
+      display: flex;
+      width: 80rem;
+      justify-content: space-between;
+
+      .nav_wrapper{
+        display: flex;
+        align-items: center;
+        width: 55.3rem;
+
+        .nav_menu{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          & li {    
+            & a{
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 600;
+              font-size: 1.8rem;
+              color: $color-black;
+              line-height: 150%;
+              text-transform: uppercase;
+            }
+            & a:hover {
+              color: $color-turquoise;
+            }
+
+            .active_link {
+              color: $color-turquoise;
+              cursor: default;
+            }
+          }
+        }
+      }
+
+      .socials_wrapper {
+          width: 22.5%;
+          display: flex;
+          align-items: center;
+
+          .socials_menu {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+          }
+      }
+    }
+  }
+}
+//--------------------------Aside-------------------------------------
+
+.side_panel-wrapper {
+  width: 100%;
+  position: absolute;
+  height: 347.1rem;
+  z-index: 1;
+
+  .side_panel {
+    position: sticky;
+    top: 0;
+    width: 22rem;
+    height: 84.6rem;
+    background-color: $color-navy;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    .button_wrapper {
+      display: flex;
+      height: 8rem;
+
+      .live_icon-wrapper {
+        width: 12rem;
+        height: 3.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-orange;
+        padding: 0 2.4rem;
+        border-radius: 0 0 0.5rem 0;
+
+        h6 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 1.8rem;
+          color: $color-white;
+          line-height: 2.2rem;
+          text-transform: uppercase;
+        }
+
+        .camera_icon {
+          fill: $color-white;
+        }
+      }
+
+      .panel_right-arrows {
+        margin: 3rem 0 0 5.4rem;
+      }
+    }
+
+    .animal_section {
+      height: 17.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 0.1rem solid $color-white;
+      border-bottom: 0.1rem solid $color-white;
+
+      .tooltip_wrapper {
+        position: relative;
+
+        .icon_circle {
+          height: 10.4rem;
+          width: 10.4rem;
+          border-radius: 50%;
+          background-color: $color-orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          .zoos_link {
+
+            .animal_icon {
+              fill: $color-navy;
+            }
+
+            .animal_icon:hover {
+              fill: $color-white;
+            }
+          }
+        }
+
+        .icon_circle_active {
+          background-color: $color-white;
+          box-shadow: 0 0 0 4px #20113d, 0 0 0 8px $color-white;
+
+          .animal_icon {
+            fill: $color-navy;
+          }
+        }
+
+        .tooltip_text {            
+          visibility: hidden;
+          position: absolute;
+          background-color: khaki;
+          color: black;
+          text-align: center;
+          border-radius: 0.5rem;
+          padding: 0 0.5rem;
+          font-family: 'Montserrat', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          bottom: 10rem;
+          left: 10rem;
+          transition: visibility 0s ease-in 0.1s;
+        }
+      }
+
+      .tooltip_wrapper:hover {
+
+        .tooltip_text {
+          visibility: visible;
+        }
+      }
+    }
+
+    .bottom_button-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 8rem;
+    }
+  }
+}
+
+// -------------------------Live Cams----------------------------------
+
+.live_cams {
+  width: 100%;
+  height: 149.7rem;
+  display: flex;
+
+  .live_cams-wrapper {
+    width: 140rem;
+    margin: 0 auto;
+    overflow: auto;
+
+    .title_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5rem 0 4.6rem 47rem;
+
+      .title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 5.4rem;
+        color: $color-turquoise;
+        line-height: 6.6rem;
+        text-transform: uppercase;
+      }
+
+      .donate_now-button {
+        width: 24rem;
+        height: 7.4rem;
+        background-color: $color-orange;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 0 3.486rem;
+        justify-content: space-between;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        svg {
+          fill: $color-white;
+        }
+      }
+      
+      .donate_now-button:hover, .donate_now-button:active {
+        background-color: $color-dark-orange;
+              box-shadow: 0 0.4rem 3rem rgba(245, 128, 33, 0.3);
+      }
+    }
+
+    .video_wrapper {
+      position: relative;
+      width: 140rem;
+      height: 78.7rem;
+
+      .cam_name-wrapper {
+        position: absolute;
+        top: 1.4rem;
+        left: 1.75rem;
+
+        .cam_name {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 2.7rem;
+          line-height: 130%;
+          color: $color-white;
+          letter-spacing: 0.07rem;
+        }
+      }
+
+      .invisible_plug {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .more_live-wrapper {
+      margin: 10rem 0 15rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .more_live-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        color: $color-black;
+        text-transform: uppercase;
+      }
+
+      .slider_wrapper {
+        width: 122.6rem;
+        margin-top: 3rem;
+        margin-left: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .slider_button-left {
+          width: 8rem;
+          height: 7.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: inherit;
+          border: none;
+          outline: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+
+          svg {
+            fill: $color-navy;
+          }
+        }
+
+        .slider_button-left:hover {
+          background-color: $color-navy;
+
+          svg {
+            fill: $color-white;
+          }
+        }
+
+        .slider_content {
+          display: flex;
+          width: 104rem;
+          justify-content: space-between;
+
+          .cam_slider-wrapper {
+            position: relative;
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            .invisible_plug {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            }
+
+            .slider_cam-name {
+              position: absolute;
+              display: flex;
+              width: 18.9rem;
+              height: 4.4rem;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 4rem;
+  
+              .cam_name {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+                color: $color-white;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+
+        .slider_button-right {
+          width: 8rem;
+          height: 7.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: inherit;
+          border: none;
+          outline: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+
+          svg {
+            fill: $color-navy;
+          }
+        }
+
+        .slider_button-right:hover {
+          background-color: $color-navy;
+
+          svg {
+            fill: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------Quick Donate------------------------
+
+.donation_content {
+  width: 100%;
+  background-color: $color-navy;
+
+  .donation_content_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 140rem;
+    height: 22.4rem;
+    margin: 0 auto;
+
+    .donation_text {
+      height: 22.1rem;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5rem;
+
+      h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 2.1rem;
+      }
+
+      p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: $color-white;
+        max-width: 91.9rem;
+      }
+    }
+
+    .donation_form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 5.3rem;
+
+      h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 2.6rem;
+        line-height: 130%;
+        color: $color-white;
+        margin-bottom: 1rem;
+      }
+
+      .donation_input {
+        display: flex;
+        position: relative;
+
+        input {
+          min-width: 32rem;
+          min-height: 7.4rem;
+          padding-left: 3rem;
+          background-color: inherit;
+          border: 0.1rem solid $color-white;
+          border-radius: 0.5rem;
+          color: $color-white;
+
+          font: {
+            family: 'Montserrat', sans-serif;
+            weight: 600;
+            size: 1.8rem;
+          }
+          line-height: 2.2rem;
+          text-transform: uppercase;
+          z-index: 1;
+        }                    
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+
+        input::-webkit-input-placeholder {
+          color: $color-white;
+        }
+
+        button {
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 8rem;
+          height: 7.4rem;
+          background-color: $color-orange;
+          border-radius: 0.5rem;    
+          outline: none;
+          border: none;
+          margin-left: -8rem;
+
+          svg {
+            fill: $color-white;
+          }
+        }
+
+        button:hover, button:active {
+          background-color: $color-dark-orange;
+          cursor: pointer;
+        }
+      }
+
+      .donation_input::before {
+        position: absolute;
+        top: 2.6rem;
+        left: 1.4rem;
+        content: '$';
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-transform: uppercase;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+// -------------------------Did you know-------------------------
+
+.know {
+  width: 100%;
+
+  .know_wrapper {
+    width: 140rem;
+    height: 148.1rem;
+    margin: 0 auto;
+    padding: 17.5rem 0 15rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .know_fact {
+      margin-left: 24rem;
+      width: 104rem;
+      height: 29.9rem;
+      padding: 5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.25);
+
+      &-title {
+        margin-bottom: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        text-transform: uppercase;
+        color: $color-turquoise;
+      }
+
+      &-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 2.6rem;
+        line-height: 134%;
+        color: $color-black;
+        height: 91.9rem;
+        text-align: center;
+      }
+    }
+
+    .know_content {
+      width: 116rem;
+
+      .content_characters {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .characters {
+          display: flex;
+          flex-direction: column;
+
+          .head_characters {
+            display: flex;
+            flex-direction: column;
+            height: 9.3rem;
+            justify-content: space-between;
+
+            .character_wrapper {
+              display: flex;
+              align-items: flex-end;
+
+              .character_title {
+                margin-right: 2rem;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 2.6rem;
+                line-height: 130%;
+                color: $color-black;
+              }
+
+              .character_text {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: normal;
+                font-size: 1.8rem;
+                line-height: 150%;
+                color: $color-black;
+              }
+            }
+          }
+
+          .bottom_characters {
+            display: flex;
+            margin-top: 2.5rem;
+
+            .bottom_characters-wrapper {
+              display: flex;  
+              flex-direction: column;
+              height: 26.4rem;
+              padding-bottom: 2.2rem;
+              justify-content: space-between;
+              position: relative;
+
+              .character_wrapper {
+                display: flex;
+                align-items: flex-end;
+  
+                .character_title {
+                  margin-right: 2rem;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 500;
+                  font-size: 2.6rem;
+                  line-height: 130%;
+                  color: $color-black;
+                }
+  
+                .character_text {
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: normal;
+                  font-size: 1.8rem;
+                  line-height: 150%;
+                  color: $color-black;
+                }
+              }
+
+              .map_button-wrapper {
+                position: absolute;
+                left: 26.6rem;
+                top: 19rem;
+
+                .map_link {
+  
+                  .viem_map-button {
+                    width: 24rem;
+                    height: 7.4rem;
+                    border: none;
+                    outline: none;
+                    background-color: inherit;
+                    padding: 0 4.419rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    line-height: 2.2rem;
+                    text-transform: uppercase;
+                    color: $color-orange;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+      
+                    svg {
+                      fill: $color-orange;
+                    }
+                  }
+    
+                  .viem_map-button:hover {
+                    background-color: $color-orange;
+                    color: $color-white;
+    
+                    svg {
+                      fill: $color-white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .know_text-wrapper {
+        margin-top: 5rem;
+
+        .know_text {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------Footer-----------------------------
+footer {
+  width: 100%;
+  background-color: $color-navy;
+
+  .footer_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 140rem;
+    margin: 0 auto;
+
+    .footer_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 21.4rem;
+      border-bottom: 0.1rem solid $color-white;
+
+      .logos_wrapper {
+        width: 41.4rem;
+        display: flex;
+        justify-content: space-between;
+
+        .tooltip_wrapper {
+          position: relative;
+
+          .tooltip_text {            
+            visibility: hidden;
+            position: absolute;
+            background-color: khaki;
+            color: black;
+            text-align: center;
+            border-radius: 0.5rem;
+            padding: 0 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            top: -3.5rem;
+            left: 3.5rem;
+            transition: visibility 0s ease-in 0.1s;
+          }
+        }
+
+        .tooltip_wrapper:hover {
+          .tooltip_text {
+            visibility: visible;
+          }
+        }
+      }
+
+      .nav_wrapper {
+        width: 42.5rem;
+        display: flex;
+
+        .nav_menu {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          & li {    
+            & a {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 600;
+              font-size: 1.8rem;
+              color: $color-white;
+              line-height: 2.2rem;
+              text-transform: uppercase;
+            }
+
+            & a:hover {
+              color: $color-turquoise;
+            }
+          }
+        }
+      }
+
+      .leave_feedback-button {
+        width: 35.9rem;
+        height: 7.4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3.386rem;
+        background-color: inherit;
+        border: 0.1rem solid $color-white;
+        border-radius: 0.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        outline: none;
+
+        svg {
+          fill: $color-white;
+        }
+      }
+  
+      .leave_feedback-button:hover, .leave_feedback-button:active{
+        background-color: $color-turquoise;
+        cursor: pointer;
+  
+        svg {
+          stroke: $color-white;
+          fill: $color-white;
+        }
+      }
+    }
+
+    .socials_wrapper {
+      height: 11.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .signature_wrapper {
+        display: flex;
+        
+        .signature {
+          margin-right: 5rem;
+          font-family: 'Montserrat', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $color-white;
+        }
+      }
+
+      .socials_menu {
+        width: 20rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

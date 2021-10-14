@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../../assets/images/Favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="map.css">
+    <title>Online Zoo</title>
+  </head>
+  <body>      
+    <div class="map-page">
+      <header>
+        <div class="header_wrapper">
+          <div class="logo_wrapper">
+            <a href="../../main.html"><img src="../../assets/images/Logo.svg" alt="onlineZOO" class="logo_title"></a>
+            <h1 class="hidden_zoo">Online Zoo</h1>
+          </div>
+
+          <div class="nav-social_wrapper">
+            <div class="burger_menu">
+              <div class="burger_menu_line"></div>
+            </div>
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../main.html">About</a></li>
+                <li><a href="../map/map.html" class="active_link">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html">Zoos</a></li>
+                <li><a href="../contact-us/contact.html">Contact us</a></li>
+                <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project">Design</a></li>
+              </ul>
+            </nav>
+
+            <div class="socials_wrapper">
+              <ul class="socials_menu">
+                <li><a href="https://www.youtube.com/"><img src="../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+              </ul>
+            </div>
+          </div>                
+        </div>
+      </header>
+
+      <div class="map">
+        <div class="map_content">
+          <div class="map_title">
+            <h2>find where are the animals live</h2>
+          </div>
+
+          <div class="map_wrapper">
+            <picture class="map_img">
+              <source media="(max-width:639px)" srcset="../../assets/images/Map-320.jpg">
+              <source media="(max-width:1199px)" srcset="../../assets/images/Map-640.jpg">
+              <source media="(max-width:1919px)" srcset="../../assets/images/Map-1200.jpg">
+              <img class="contact_page_img" src="../../assets/images/Map.jpg" alt="Map">
+            </picture>
+
+            
+
+            <div class="animals_position">
+              <div class="tooltip_wrapper">
+                <a class="zoos_link" href="#" title="Alligator, USA">
+                  <svg class="alligator icon_background" width="141" height="182" viewBox="0 0 141 182">
+                    <use xlink:href="sprites.svg#animal_location-alligator"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a class="zoos_link" href="#" title="Lion, Mauritania">
+                  <svg class="lion icon_background" width="141" height="182" viewBox="0 0 141 182">
+                    <use xlink:href="sprites.svg#animal_location-lion"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a href="../zoos-pages/gorilla/gorilla.html" class="zoos_link" title="Gorilla, Chad">
+                  <svg class="gorilla icon_background" width="141" height="182" viewBox="0 0 141 182">
+                      <use xlink:href="sprites.svg#animal_location-gorilla"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a href="../zoos-pages/lemur/lemur.html" class="zoos_link" title="Lemur, Madagascar">
+                  <svg class="lemur icon_background" width="141" height="182" viewBox="0 0 141 182">
+                      <use xlink:href="sprites.svg#animal_location-lemur"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a href="../zoos-pages/panda/panda.html" class="zoos_link" title="Panda, China">
+                  <svg class="panda icon_background" width="141" height="182" viewBox="0 0 141 182">
+                    <use xlink:href="sprites.svg#animal_location-panda"/>
+                </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a class="zoos_link" href="#" title="Tiger, Malaysia">
+                  <svg class="tiger icon_background" width="141" height="182" viewBox="0 0 141 182">
+                    <use xlink:href="sprites.svg#animal_location-tiger"/>
+                </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a class="zoos_link" href="#" title="Koala, Australia">
+                  <svg class="koala icon_background" width="141" height="182" viewBox="0 0 141 182">
+                    <use xlink:href="sprites.svg#animal_location-koala"/>
+                </svg>
+                </a>
+              </div>
+
+              <div class="tooltip_wrapper">
+                <a href="../zoos-pages/eagles/eagles.html" class="zoos_link" title="Eagle, Mexico">
+                  <svg class="eagle icon_background" width="141" height="182" viewBox="0 0 141 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="sprites.svg#animal_location-eagle"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer_wrapper">
+          <div class="footer_content">
+            <div class="logos_wrapper">
+              <div class="tooltip_wrapper">
+                <a href="../../main.html" class="logo_link">
+                  <img src="../../assets/icons/footer-zoo-logo.svg" alt="Online ZOO Logo">
+                </a>                
+                <p class="tooltip_text">Online Zoo</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../assets/icons/footer-yem-logo.svg" alt="Yem Digital Logo">
+                <p class="tooltip_text">Yem Digital</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../assets/icons/footer-rss-logo.svg" alt="RS School Logo">
+                <p class="tooltip_text">Rolling Scopes School</p>
+              </div>
+            </div>
+
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../main.html">About</a></li>
+                <li><a href="../map/map.html">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html">Zoos</a></li>
+                <li><a href="../contact-us/contact.html">Contact us</a></li>
+              </ul>
+            </nav>
+
+            <button class="leave_feedback-button">
+              Donate for volunteers
+              <svg width="26" height="22" viewBox="0 0 26 22">
+              <use xlink:href="sprites.svg#slider_button-right"/>
+            </svg>
+            </button>
+          </div>
+
+          <hr class="socials_horizontal_line">
+
+          <div class="socials_wrapper">
+            <div class="signature_wrapper">
+              <p class="signature">© 2021 DinaK</p>
+              <p class="signature">© Yem Digital</p>
+              <p class="signature">© RSSchool</p>
+            </div>
+
+            <hr class="signature_horizontal_line">
+
+            <ul class="socials_menu">
+              <li><a href="https://www.youtube.com/"><img src="../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+              <li><a href="https://www.instagram.com/"><img src="../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+              <li><a href="https://www.facebook.com/"><img src="../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="map.js"></script>
+  </body>
+</html>

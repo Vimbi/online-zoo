@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../../../assets/images/Favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="panda.css">
+    <title>Online Zoo</title>
+  </head>
+  <body>
+
+    <div class="cover-div display-none"></div>
+
+    <div class="popup display-none">
+      <div class="popup__header">
+        <picture>
+          <source media="(max-width:1199px)" srcset="../../../assets/images/popup-image-640.jpg">
+          <source media="(max-width:1919px)" srcset="../../../assets/images/popup-image-1200.jpg">
+          <img class="popup__image" src="../../../assets/images/popup-image.jpg" alt="Hand to hand">
+        </picture>
+        <button class="popup__button_close"></button>
+      </div>
+      <div class="popup__footer">
+        <h2 class="popup__title">together we care, save and protect!</h2>
+        <p class="popup__text">Your most generous gift not only cares for countless animals, but it also offers hope and a vital lifeline to the world’s most endangered wildlife relying on us to survive.</p>
+        <div class="popup__buttons">
+          <button class="popup__button">$20</button>
+          <button class="popup__button">$30</button>
+          <button class="popup__button">$50</button>
+          <button class="popup__button">$80</button>
+          <button class="popup__button">$100</button>
+          <button class="popup__button popup__button_wide">Other amount</span></button>
+        </div>
+      </div>
+    </div>
+
+    <form class="donation-form display-none">
+
+      <div class="donation-form__header">
+        <h3 class="donation-form__title">make your donation</h3>
+      </div>
+
+      <div class="donation-form__step1">
+
+        <h5 class="donation-form__info-title">Donation Information:</h5>
+        <hr class="donation-form__line">
+
+        <div class="donation-form__content">
+
+          <h5 class="donation-form__choose"><span>*</span> Choose your donation amount:</h5>
+
+          <div class="donation-form__buttons">
+            <button class="donation-form__button">$10</button>
+            <button class="donation-form__button">$20</button>
+            <button class="donation-form__button">$30</button>
+            <button class="donation-form__button">$50</button>
+            <button class="donation-form__button">$80</button>
+            <button class="donation-form__button">$100</button>
+            <button class="donation-form__button donation-form__button-wide donation-form__other-button">Other amount</button>
+            <input class="donation-form__input-cost" type="number" required>
+          </div>
+
+          <div class="donation-form__special">
+            <button class="donation-form__button donation-form__button-wide">for special pet</button>
+            <select class="donation-form__select donation-form__select-animals" name="animals" id="animals" required>
+              <option value selected disabled>Choose animal</option>
+              <option value="1">Lukas the Panda</option>
+              <option value="2">Andy the Lemur</option>
+              <option value="3">Glen the Gorilla</option>
+              <option value="4">Mike the Alligator</option>
+              <option value="5">Sam & Lora the eagles family</option>
+              <option value="6">Liz the Koala</option>
+              <option value="7">Shake the Lion</option>
+              <option value="8">Senja the Tiger</option>
+            </select>
+          </div>
+
+          <div class="donation-form__recur-payment">
+            <input type="checkbox" id="recur" name="recur">
+            <label for="recur">Make this a monthly recurring gift</label>
+          </div>
+
+          <div class="donation-form__next">
+            <div class="donation-form__checkbox">
+              <ul class="slider_dots">
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button" type="button"></button>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="donation-form__button donation-form_next-button">next<img src="../../../assets/icons/right_arrow.svg" alt="right_arrow"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="donation-form__step2">
+        <h5 class="donation-form__info-title">Billing Information:</h5>
+        <hr class="donation-form__line">
+
+        <div class="donation-form__content">
+
+          <div class="donation-form_form">
+            <div class="donation-form__input-wrapper">
+              <label for="name" class="input_title"><span>*</span> Your Name</label>
+              <input class="donation-form__input-name" id="name" type="text" placeholder="First and last name" required>
+            </div>
+
+            <div class="donation-form__input-wrapper">
+                <label for="email" class="input_title"><span>*</span> Your Email Address</label>
+                <input class="donation-form__input-email" id="email" type="email" placeholder="Enter your email" required>
+                <p class="donation-form__email-description">
+                  You will receive emails from the Online Zoo, including updates and news on the latest discoveries and translations. You can unsubscribe at any time.
+                </p>
+            </div>
+          </div>
+
+          <div class="donation-form__next">
+            <div class="donation-form__checkbox">
+              <ul class="slider_dots">
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button" type="button"></button>
+                </li>
+              </ul>
+            </div>
+
+            <p class="donation-form__button-back">Back</p>
+
+            <button type="button" class="donation-form__button donation-form_next-button">next<img src="../../../assets/icons/right_arrow.svg" alt="right_arrow"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="donation-form__step3">
+        <h5 class="donation-form__info-title">Payment Information:</h5>
+        <hr class="donation-form__line">
+
+        <div class="donation-form__content">
+
+          <div class="donation-form__content-number">
+            <div class="donation-form__input-wrapper donation-form__input-card">
+              <label for="name" class="input_title"><span>*</span> Credit Card Number
+              </label>
+              <input id="name" type="tel" class="donation-form__card-input" required>
+            </div>
+
+            <div class="donation-form__input-wrapper donation-form__input-cvv">
+              <label for="name" class="input_title"><span>*</span> CVV Number</label>
+              <input id="name" type="tel" class="donation-form__cvv-input" required>
+            </div>
+          </div>
+
+          <div class="donation-form__input-wrapper">
+            <label for="name" class="input_title"><span>*</span> Expiration Date</label>
+
+            <div class="donation-form__select-data">
+              <select class="donation-form__select-month" name="month" id="name" required>
+                <option value selected disabled>Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+
+              <select class="donation-form__content-year" name="year" id="name" required>
+                <option value selected disabled>Year</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="donation-form__next">
+            <div class="donation-form__checkbox">
+              <ul class="slider_dots">
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+                <li class="slider_dot">
+                  <button class="slider_dot_button button_active" type="button"></button>
+                </li>
+              </ul>
+            </div>
+
+            <p class="donation-form__button-back">Back</p>
+
+            <button type="submit" class="donation-form__button donation-form__button-complete" disabled>complete donation<img src="../../../assets/icons/right_arrow.svg" alt="right_arrow"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="zoos-page">
+
+      <header>
+        <div class="header_wrapper">
+          <div class="logo_wrapper">
+            <a href="../../../main.html"><img src="../../../assets/images/Logo.svg" alt="onlineZOO" class="logo_title"></a>
+            <h1 class="hidden_zoo">Online Zoo</h1>
+          </div>
+
+          <div class="nav-social_wrapper">
+            <div class="burger_menu">
+              <div class="burger_menu_line"></div>
+            </div>
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../../main.html">About</a></li>
+                <li><a href="../../map/map.html">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html" class="active_link">Zoos</a></li>
+                <li><a href="../../contact-us/contact.html">Contact us</a></li>
+                <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project">Design</a></li>
+              </ul>
+            </nav>
+
+            <div class="socials_wrapper">
+              <ul class="socials_menu">
+                <li><a href="https://www.youtube.com/"><img src="../../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="../../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="live_cams">
+
+        <aside class="side_panel-wrapper">
+          <div class="side_panel">
+            <div class="button_wrapper">
+              <div class="live_icon-wrapper">
+                <h6>Live</h6>
+                <svg class="camera_icon" width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="../sprites.svg#camera_icon"/>
+                </svg>
+              </div>
+
+              <svg class="panel_right-arrows" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="../sprites.svg#panel_right-arrows"/>
+              </svg>
+            </div>
+
+            <div class="animal_section__wrapper">
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle icon_circle_active" title="Panda, China">
+                    <svg class="animal_icon_active" width="81" height="61" viewBox="0 0 81 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#panda_icon"/>
+                    </svg>
+                    <p></p>
+                  </div>
+                  <!-- <p class="tooltip_text">Animal: Panda<br>Country: China</p> -->
+                </div>
+                <p class="animal_section__text display-none">Watch live from China's Panda Center</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../eagles/eagles.html" class="zoos_link" title="Eagle, Mexico">
+                        <svg class="animal_icon" width="65" height="61" viewBox="0 0 65 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="../sprites.svg#eagle_icon"/>
+                        </svg>
+                    </a>
+                  </div>
+                  <!-- <p class="tooltip_text">Animal: Eagle<br>Country: Mexico</p> -->
+                </div>
+                <p class="animal_section__text display-none">Watch The Bald Eagles Nest from West End cam</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../gorilla/gorilla.html" class="zoos_link" title="Gorilla, Chad">
+                      <svg class="animal_icon" width="69" height="61" viewBox="0 0 69 61" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="../sprites.svg#gorilla_icon"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- <p class="tooltip_text">Animal: Gorilla<br>Country: Chad</p> -->
+                </div>
+                <p class="animal_section__text display-none">Livestream from Gorilla Forest Corridor habitat cam</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../lemur/lemur.html" class="zoos_link" title="Lemur, Madagascar">
+                      <svg class="animal_icon" width="37" height="61" viewBox="0 0 37 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="../sprites.svg#lemur_icon"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- <p class="tooltip_text">Animal: Lemur<br>Country: Madagascar</p> -->
+                </div>
+                <p class="animal_section__text display-none">The ring-tailed lemurs play in Madagascar, Lemuria Land</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../eagles/eagles.html" class="zoos_link" title="Alligator, USA">
+                        <svg class="animal_icon" width="65" height="61" viewBox="0 0 65 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="../sprites.svg#alligator_icon"/>
+                        </svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="animal_section__text display-none">Watch The Alligator from Mexico</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../gorilla/gorilla.html" class="zoos_link" title="Lion, Mauritania">
+                      <svg class="animal_icon" width="69" height="61" viewBox="0 0 69 61" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="../sprites.svg#lion_icon"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="animal_section__text display-none">Livestream from Lion desert habitat cam</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../lemur/lemur.html" class="zoos_link" title="Tiger, Malaysia">
+                      <svg class="animal_icon" width="64" height="54" viewBox="0 0 64 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="../sprites.svg#tiger_icon"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="animal_section__text display-none">The ring-tailed tigers play in Malaysia</p>
+              </div>
+
+              <div class="animal_section">
+                <div class="tooltip_wrapper">
+                  <div class="icon_circle">
+                    <a href="../lemur/lemur.html" class="zoos_link" title="Koala, Australia">
+                      <svg class="animal_icon" width="44" height="55" viewBox="0 0 44 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="../sprites.svg#koala_icon"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="animal_section__text display-none">The ring-tailed koalas play in Australia, Koala Land</p>
+              </div>
+            </div>
+
+            <div class="bottom_button-wrapper">
+              <svg class="side_panel__bottom_button" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="../sprites.svg#panel_down-arrow"/>
+              </svg>
+            </div>
+          </div>
+        </aside>
+
+        <div class="live_cams-wrapper">
+          <div class="title_wrapper">
+            <h2 class="title">Live panda cams</h2>
+            <button class="donate_now-button">
+              Donate now
+              <svg width="26" height="22" viewBox="0 0 26 22">
+                <use xlink:href="../sprites.svg#slider_button-right"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="video_wrapper">
+            <div class="cam_name-wrapper">
+              <h4 class="cam_name">Lucas, the Giant Panda cam 1</h4>
+            </div>
+            <div class="invisible_plug"></div>
+            <iframe class="video_wrapper_iframe" width="1400" height="787" src="https://www.youtube.com/embed/65JHo3Cy2tY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="more_live-wrapper">
+            <h3 class="more_live-title">More live views</h3>
+
+            <div class="slider_wrapper">
+              <button class="slider_button-left">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="../sprites.svg#slider_arrow-left"/>
+                </svg>
+              </button>
+
+              <div class="slider_content">
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 1</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 2</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/D0eqnda8dOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 3</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/7NOSDKb0HlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 4</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/D0eqnda8dOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 5</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 6</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/D0eqnda8dOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 7</h5>
+                    <svg class="cam_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe class="slider_cam_iframe" width="320" height="209" src="https://www.youtube.com/embed/7NOSDKb0HlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+
+              </div>
+
+              <button class="slider_button-right">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="../sprites.svg#slider_arrow-right"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="donation_content">
+        <div class="donation_content_wrapper">
+          <div class="donation_text">
+            <h3>Make the Bamboo Donation!</h3>
+            <p>Our process for bamboo donations first starts with a site evaluation. It is important that our team sees where the bamboo is growing, then determining if the bamboo is a species that our animals are currently eating. Thank you for your interest in donating bamboo for our pandas.</p>
+          </div>
+          <div class="donation_form">
+            <h4>Quick Donate</h4>
+            <form class="donation_input">
+              <input class="quick-donation__input" type="number" placeholder="Donation amount">
+              <button class="quick-donation__button" type="button">
+                <svg width="26" height="22" viewBox="0 0 26 22">
+                  <use xlink:href="../sprites.svg#slider_button-right"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="know">
+        <div class="know_wrapper">
+          <div class="know_fact">
+            <h3 class="know_fact-title">Did you know?</h3>
+            <p class="know_fact-text">Pandas are often seen eating in a relaxed sitting posture, with their<br class="know_fact-text_br"> hind legs stretched out before them. They may appear sedentary, but<br class="know_fact-text_br">they are skilled<span class="know_fact-text_span"> tree-climbers and efficient swimmers.</span> </p>
+          </div>
+
+          <div class="know_content">
+            <div class="content_characters">
+              <div class="characters">
+                <div class="head_characters">
+                  <div class="character_wrapper">
+                    <h5 class="character_title">Common name:</h5>
+                    <p class="character_text">Giant Panda
+                    </p>
+                  </div>
+                  <div class="character_wrapper">
+                    <h5 class="character_title">Scientific name:</h5>
+                    <p class="character_text">Ailuropoda melanoleuca
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottom_characters">
+                  <div class="bottom_characters-wrapper">
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Type:</h5>
+                      <p class="character_text">Herbivore
+                      </p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Size:</h5>
+                      <p class="character_text">4 to 5 feet</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Diet:</h5>
+                      <p class="character_text">Omnivore</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Habitat:</h5>
+                      <p class="character_text">Forests
+                      </p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Range:</h5>
+                      <p class="character_text">Eastern Asia
+                      </p>
+                    </div>
+
+                    <div class="map_button-wrapper">
+                      <a class="map_link" href="../../map/map.html">
+                        <button class="viem_map-button">View map
+                          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="../sprites.svg#view_map-right_arrow-button"/>
+                          </svg>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width:639px)" srcset="../../../assets/images/zoos-know-panda-320.jpg">
+                <source media="(max-width:1199px)" srcset="../../../assets/images/zoos-know-panda-640.jpg">
+                <source media="(max-width:1919px)" srcset="../../../assets/images/zoos-know-panda-1200.jpg">
+                <img class="contact_page_img" src="../../../assets/images/zoos-know-panda.jpg" alt="Panda on tree">
+              </picture>
+            </div>
+
+            <div class="know_text-wrapper">
+              <p class="know_text">Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very low in nutrients. Because of this, they have many unique adaptations for their low-energy lifestyle. Giant pandas are solitary. They have a highly developed sense of smell that males use to avoid each other and to find females for mating in the spring. After a five-month pregnancy, females give birth to a cub or two, though they cannot care for both twins. The blind infants weigh only 5 ounces at birth and cannot crawl until they reach three months of age. They are born white, and develop their much loved coloring later. Habitat loss is the primary threat to this species. Its popularity around the world has helped the giant panda become the focus of successful conservation programs.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer_wrapper">
+          <div class="footer_content">
+            <div class="logos_wrapper">
+              <div class="tooltip_wrapper">
+                <a href="../../../main.html" class="logo_link">
+                  <img src="../../../assets/icons/footer-zoo-logo.svg" alt="Online ZOO Logo">
+                </a>
+                <p class="tooltip_text">Online Zoo</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../../assets/icons/footer-yem-logo.svg" alt="Yem Digital Logo">
+                <p class="tooltip_text">Yem Digital</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../../assets/icons/footer-rss-logo.svg" alt="RS School Logo">
+                <p class="tooltip_text">Rolling Scopes School</p>
+              </div>
+            </div>
+
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../../main.html">About</a></li>
+                <li><a href="../../map/map.html">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html">Zoos</a></li>
+                <li><a href="../../contact-us/contact.html">Contact us</a></li>
+              </ul>
+            </nav>
+
+            <button class="leave_feedback-button footer__donation-button">
+              Donate for volunteers
+              <svg width="26" height="22" viewBox="0 0 26 22">
+                <use xlink:href="../sprites.svg#slider_button-right"/>
+            </svg>
+            </button>
+          </div>
+
+          <hr class="socials_horizontal_line">
+
+          <div class="socials_wrapper">
+            <div class="signature_wrapper">
+              <p class="signature">© 2021 DinaK</p>
+              <p class="signature">© Yem Digital</p>
+              <p class="signature">© RSSchool</p>
+            </div>
+
+            <hr class="signature_horizontal_line">
+
+            <ul class="socials_menu">
+              <li><a href="https://www.youtube.com/"><img src="../../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+              <li><a href="https://www.instagram.com/"><img src="../../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+              <li><a href="https://www.facebook.com/"><img src="../../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="panda.js"></script>
+  </body>
+</html>

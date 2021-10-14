@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../../../assets/images/Favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eagles.css">
+    <title>Online Zoo</title>
+  </head>
+  <body>      
+    <div class="zoos-page">
+      <header>
+        <div class="header_wrapper">
+          <div class="logo_wrapper">
+            <a href="../../../main.html"><img src="../../../assets/images/Logo.svg" alt="onlineZOO" class="logo_title"></a>
+            <h1 class="hidden_zoo">Online Zoo</h1>
+          </div>
+
+          <div class="nav-social_wrapper">
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../../main.html">About</a></li>
+                <li><a href="../../map/map.html">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html" class="active_link">Zoos</a></li>
+                <li><a href="../../contact-us/contact.html">Contact us</a></li>
+                <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project">Design</a></li>
+              </ul>
+            </nav>
+
+            <div class="socials_wrapper">
+              <ul class="socials_menu">
+                <li><a href="https://www.youtube.com/"><img src="../../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="../../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+              </ul>
+            </div>
+          </div>                
+        </div>
+      </header>
+
+      <aside class="side_panel-wrapper">
+        <div class="side_panel">
+          <div class="button_wrapper">
+            <div class="live_icon-wrapper">
+              <h6>Live</h6>
+              <svg class="camera_icon" width="20" height="20" viewBox="0 0 20 20">
+                <use xlink:href="../sprites.svg#camera_icon"/>
+              </svg>                
+            </div>
+
+            <svg class="panel_right-arrows" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="../sprites.svg#panel_right-arrows"/>
+            </svg>
+          </div>
+
+          <div class="animal_section">
+            <div class="tooltip_wrapper">
+              <div class="icon_circle icon_circle_active">
+                <svg class="animal_icon" width="65" height="61" viewBox="0 0 65 61">
+                  <use xlink:href="../sprites.svg#eagle_icon"/>
+                </svg>
+              </div>
+              <p class="tooltip_text">Animal: Eagle<br>Country: Mexico</p>
+            </div>
+          </div>
+
+          <div class="animal_section">
+            <div class="tooltip_wrapper">              
+              <div class="icon_circle">
+                <a href="../gorilla/gorilla.html" class="zoos_link">
+                  <svg class="animal_icon" width="69" height="61" viewBox="0 0 69 61" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="../sprites.svg#gorilla_icon"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="tooltip_text">Animal: Gorilla<br>Country: Chad</p>
+            </div>
+          </div>
+
+          <div class="animal_section">
+            <div class="tooltip_wrapper">
+              <div class="icon_circle">
+                <a href="../lemur/lemur.html" class="zoos_link">
+                  <svg class="animal_icon" width="37" height="61" viewBox="0 0 37 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="../sprites.svg#lemur_icon"/>
+                  </svg>
+                </a>
+              </div>             
+              <p class="tooltip_text">Animal: Lemur<br>Country: Madagascar</p>
+            </div>
+          </div>
+
+          <div class="animal_section">
+            <div class="tooltip_wrapper">
+              <div class="icon_circle">
+                <a href="../panda/panda.html" class="zoos_link">
+                  <svg class="animal_icon" width="81" height="61" viewBox="0 0 81 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="../sprites.svg#panda_icon"/>
+                  </svg>
+                </a>
+              </div>            
+              <p class="tooltip_text">Animal: Panda<br>Country: China</p>
+            </div>
+          </div>
+
+          <div class="bottom_button-wrapper">
+            <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="../sprites.svg#panel_down-arrow"/>
+            </svg>
+          </div>
+        </div>
+      </aside>
+
+      <div class="live_cams">
+        <div class="live_cams-wrapper">
+          <div class="title_wrapper">
+            <h2 class="title">Bald Eagle cams</h2>
+            <button class="donate_now-button">
+              Donate now
+              <svg width="26" height="22" viewBox="0 0 26 22">
+                <use xlink:href="../sprites.svg#slider_button-right"/>
+              </svg>
+            </button>
+          </div>
+  
+          <div class="video_wrapper">
+            <div class="cam_name-wrapper">
+              <h4 class="cam_name">Sam & Lora, the Bald Eagles cam 1</h4>
+            </div>
+            <div class="invisible_plug"></div>
+            <iframe width="1400" height="787" src="https://www.youtube.com/embed/6zE6qcgTox8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+  
+          <div class="more_live-wrapper">
+            <h3 class="more_live-title">More live views</h3>
+            
+            <div class="slider_wrapper">
+              <button class="slider_button-left">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="../sprites.svg#slider_arrow-left"/>
+                </svg>
+              </button>
+
+              <div class="slider_content">
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 1</h5>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe width="320" height="209" src="https://www.youtube.com/embed/6zE6qcgTox8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+    
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 2</h5>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe width="320" height="209" src="https://www.youtube.com/embed/6zE6qcgTox8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+                
+                <div class="cam_slider-wrapper">
+                  <div class="slider_cam-name">
+                    <h5 class="cam_name">Cam 3</h5>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="../sprites.svg#slider_cam_icon"/>
+                    </svg>
+                  </div>
+                  <iframe width="320" height="209" src="https://www.youtube.com/embed/6zE6qcgTox8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="invisible_plug"></div>
+                </div>
+              </div>
+  
+              <button class="slider_button-right">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="../sprites.svg#slider_arrow-right"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="donation_content">
+        <div class="donation_content_wrapper">
+          <div class="donation_text">
+            <h3>Keep the Bald Eagle cams Streaming!</h3>
+            <p>Watch as this lifelong pair of eagle parents lay and protect eggs, feed their chicks and teach them to hunt and fly. Sam & Lora have stolen the hearts of thousands of viewers! 100% of the donations from this page will be utilized directly for the streaming and operational costs of this project.</p>
+          </div>
+          <div class="donation_form">
+            <h4>Quick Donate</h4>
+            <form class="donation_input">
+              <input type="number" placeholder="Donation amount">
+              <button type="button">
+                <svg width="26" height="22" viewBox="0 0 26 22">
+                  <use xlink:href="../sprites.svg#slider_button-right"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="know">
+        <div class="know_wrapper">
+          <div class="know_fact">
+            <h3 class="know_fact-title">Did you know?</h3>
+            <p class="know_fact-text">Because of its role as a symbol of the US, but also because of its<br>being a large predator, the bald eagle has many representations in<br>popular culture. Not all of these representations are accurate. In<br>particular, the movie or television bald eagle typically has a bold,<br>powerful cry. The actual eagle has a much softer, chirpy voice, not in<br>keeping with its popular image.</p>
+          </div>
+
+          <div class="know_content">
+            <div class="content_characters">
+              <div class="characters">
+                <div class="head_characters">
+                  <div class="character_wrapper">
+                    <h5 class="character_title">Common name:</h5>
+                    <p class="character_text">Bald Eagle
+                    </p>
+                  </div>
+                  <div class="character_wrapper">
+                    <h5 class="character_title">Scientific name:</h5>
+                    <p class="character_text">Haliaeetus Leucocephalus
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottom_characters">
+                  <div class="bottom_characters-wrapper">
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Type:</h5>
+                      <p class="character_text">Birds</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Size:</h5>
+                      <p class="character_text">Body: 34 to 43 inches; wingspan: 6 to 8 feet</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Diet:</h5>
+                      <p class="character_text">Carnivore</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Habitat:</h5>
+                      <p class="character_text">Seacoasts, rivers, large lakes or marshes</p>
+                    </div>
+                    <div class="character_wrapper">
+                      <h5 class="character_title">Range:</h5>
+                      <p class="character_text">Continental United States</p>
+                    </div>
+
+                    <div class="map_button-wrapper">
+                      <a class="map_link" href="../../map/map.html">
+                        <button class="viem_map-button">View map
+                          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="../sprites.svg#view_map-right_arrow-button"/>
+                          </svg>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="../../../assets/images/zoos-know-eagles.jpg" alt="Panda">
+            </div>
+
+            <div class="know_text-wrapper">
+              <p class="know_text">The bald eagle, with its snowy-feathered (not bald) head and white tail, is the proud national bird symbol of the United<br>States—yet the bird was nearly wiped out there. For many decades, bald eagles were hunted for sport and for the "protection" of fishing grounds. These powerful birds of prey use their talons to fish, but they get many of their meals by scavenging carrion or stealing the kills of other animals. They live near water and favor coasts and lakes where fish are plentiful, though they will also snare and eat small mammals. Bald eagles are believed to mate for life. A pair constructs an enormous stick nest—one of the bird-world's biggest—high above the ground and tends to a pair of eggs each year. Immature eagles are dark, and until they are about five years old, they lack the distinctive white markings that make their parents so easy to identify.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer_wrapper">
+          <div class="footer_content">
+            <div class="logos_wrapper">
+              <div class="tooltip_wrapper">
+                <a href="main.html" class="logo_link">
+                  <img src="../../../assets/icons/footer-zoo-logo.svg" alt="Online ZOO Logo">
+                </a>                
+                <p class="tooltip_text">Online Zoo</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../../assets/icons/footer-yem-logo.svg" alt="Yem Digital Logo">
+                <p class="tooltip_text">Yem Digital</p>
+              </div>
+              <div class="tooltip_wrapper">
+                <img src="../../../assets/icons/footer-rss-logo.svg" alt="RS School Logo">
+                <p class="tooltip_text">Rolling Scopes School</p>
+              </div>
+            </div>
+
+            <nav class="nav_wrapper">
+              <ul class="nav_menu">
+                <li><a href="../../../main.html">About</a></li>
+                <li><a href="../../map/map.html">Map</a></li>
+                <li><a href="../zoos-pages/panda/panda.html">Zoos</a></li>
+                <li><a href="../../contact-us/contact.html">Contact us</a></li>
+              </ul>
+            </nav>
+
+            <button class="leave_feedback-button">
+              Donate for volunteers
+              <svg width="26" height="22" viewBox="0 0 26 22">
+                <use xlink:href="../sprites.svg#slider_button-right"/>
+            </svg>
+            </button>
+          </div>
+
+          <div class="socials_wrapper">
+            <div class="signature_wrapper">
+              <p class="signature">© 2021 DinaK</p>
+              <p class="signature">© Yem Digital</p>
+              <p class="signature">© RSSchool</p>
+            </div>
+
+            <ul class="socials_menu">
+              <li><a href="https://www.youtube.com/"><img src="../../../assets/icons/YouTube.svg" alt="youtube"></a></li>
+              <li><a href="https://www.instagram.com/"><img src="../../../assets/icons/Instagram.svg" alt="instagram"></a></li>
+              <li><a href="https://www.facebook.com/"><img src="../../../assets/icons/Facebook.svg" alt="facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
